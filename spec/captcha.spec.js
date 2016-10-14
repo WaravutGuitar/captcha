@@ -84,4 +84,8 @@ describe('Captcha' , function() {
 		let test = new Captcha(2,4,2,5);
 	 expect(test.generate()).toEqual('TWO / 5');
  	});
+  it('should echo "NINE + 1" when input (2,1,9,1)',function(){
+		let test = new Captcha(2,4,2,5);
+	 expect(test.generate()).toEqual('NINE + 1');
+ 	});
 });
