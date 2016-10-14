@@ -4,7 +4,7 @@ function Captcha(pa , op , left , right)
     return new OperandL(pa , left) + ' ' + new Operator(op) + ' ' + new OperandR(pa, right);
   }
 }
-function operator(Op){
+function Operator(Op){
 	this.toString = function(){
 		if(Op === 1) {
       return '+';}
@@ -75,16 +75,12 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,1,7,5);
 	 expect(test.generate()).toEqual('7 + FIVE');
  	});
-  it('should echo "3 - ONE" when input (1,2,3,1)',function(){
-		let test = new Captcha(1,2,3,1);
-	 expect(test.generate()).toEqual('3 - ONE');
+  it('should echo "5 * ONE" when input (1,3,5,1)',function(){
+		let test = new Captcha(1,3,5,1);
+	 expect(test.generate()).toEqual('5 * ONE');
  	});
-  it('should echo "4 * ONE" when input (1,3,4,1)',function(){
-		let test = new Captcha(1,3,4,1);
-	 expect(test.generate()).toEqual('4 + ONE');
- 	});
-  it('should echo "9 + NINE" when input (1,1,9,9)',function(){
-		let test = new Captcha(1,1,9,9);
-	 expect(test.generate()).toEqual('9 + NINE');
+  it('should echo "TWO / 5" when input (2,4,2,5)',function(){
+		let test = new Captcha(2,4,2,5);
+	 expect(test.generate()).toEqual('TWO / 5');
  	});
 });
