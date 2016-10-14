@@ -80,12 +80,12 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,3,5,1);
 	 expect(test.generate()).toEqual('5 * ONE');
  	});
-  it('should echo "TWO * 5" when input (2,4,2,5)',function(){
+  it('should echo "3 * FIVE" when input (1,3,3,5)',function(){
 		let test = new Captcha(2,4,2,5);
-	 expect(test.generate()).toEqual('TWO / 5');
+	 expect(test.generate()).toEqual('3 * FIVE');
  	});
-  it('should echo "NINE + 1" when input (2,1,9,1)',function(){
+  it('should echo "1 + NINE" when input (1,1,1,9)',function(){
 		let test = new Captcha(2,4,2,5);
-	 expect(test.generate()).toEqual('NINE + 1');
+	 expect(test.generate()).toEqual('1 + NINE');
  	});
 });
