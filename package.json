@@ -1,0 +1,25 @@
+{
+  "name": "captcha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaravutGuitar/captcha.git"
+  },
+  "keywords": [
+    "jozeaza18"
+  ],
+  "author": "jo0831212153",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaravutGuitar/captcha/issues"
+  },
+  "homepage": "https://github.com/WaravutGuitar/captcha#readme",
+  "description": "",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
+}
