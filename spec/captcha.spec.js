@@ -88,4 +88,16 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,1,1,9);
 	 expect(test.generate()).toEqual('1 + NINE');
  	});
+  it('should echo "THREE * 4" when input (2,3,3,4)',function(){
+		let test = new Captcha(2,3,3,4);
+	 expect(test.generate()).toEqual('THREE * 4');
+ 	});
+  it('should echo "TWO + 2" when input (2,1,2,2)',function(){
+		let test = new Captcha(2,1,2,2);
+	 expect(test.generate()).toEqual('TWO + 2');
+ 	});
+  it('should echo "SIX / 7" when input (2,4,6,7)',function(){
+		let test = new Captcha(2,1,2,2);
+	 expect(test.generate()).toEqual('SIX + 7');
+ 	});
 });
