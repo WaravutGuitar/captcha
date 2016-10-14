@@ -16,10 +16,10 @@ function Operator(Op){
       return '/';}
 	}
 }
-function OperandL(pa,left){
+function OperandL(pa,Left){
 	this.toString = function(){
 		    if(pa === 1) {
-          return left;}
+          return Left;}
         else if(pa ===2){
           if(Left === 1){
           return 'ONE';}
@@ -87,5 +87,29 @@ describe('Captcha' , function() {
   it('should echo "1 + NINE" when input (1,1,1,9)',function(){
 		let test = new Captcha(1,1,1,9);
 	 expect(test.generate()).toEqual('1 + NINE');
+ 	});
+  it('should echo "THREE * 4" when input (2,3,3,4)',function(){
+		let test = new Captcha(2,3,3,4);
+	 expect(test.generate()).toEqual('THREE * 4');
+ 	});
+  it('should echo "TWO + 2" when input (2,1,2,2)',function(){
+		let test = new Captcha(2,1,2,2);
+	 expect(test.generate()).toEqual('TWO + 2');
+ 	});
+  it('should echo "SIX / 7" when input (2,4,6,7)',function(){
+		let test = new Captcha(2,4,6,7);
+	 expect(test.generate()).toEqual('SIX / 7');
+ 	});
+  it('should echo "TWO - 5" when input (2,2,2,5)',function(){
+		let test = new Captcha(2,2,2,5);
+	 expect(test.generate()).toEqual('TWO - 5');
+ 	});
+  it('should echo "ONE + 9" when input (2,1,1,9)',function(){
+		let test = new Captcha(2,1,1,9);
+	 expect(test.generate()).toEqual('ONE + 9');
+ 	});
+  it('should echo "8 / TWO" when input (1,4,8,2)',function(){
+		let test = new Captcha(1,4,8,2);
+	 expect(test.generate()).toEqual('8 / TWO');
  	});
 });
