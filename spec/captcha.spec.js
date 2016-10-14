@@ -20,7 +20,7 @@ function OperandL(pa,left){
 	this.toString = function(){
 		    if(pa === 1) {
           return left;}
-        else if(pa ===2)
+        else if(pa ===2){
           if(Left === 1){
           return 'ONE';}
   			else if(Left === 2){
@@ -39,6 +39,7 @@ function OperandL(pa,left){
           return 'EIGHT';}
   			else if(Left === 9){
           return 'NINE';}
+        }
 	}
 }
 function OperandR(pa,right){
@@ -79,7 +80,7 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,3,5,1);
 	 expect(test.generate()).toEqual('5 * ONE');
  	});
-  it('should echo "TWO / 5" when input (2,4,2,5)',function(){
+  it('should echo "TWO * 5" when input (2,4,2,5)',function(){
 		let test = new Captcha(2,4,2,5);
 	 expect(test.generate()).toEqual('TWO / 5');
  	});
