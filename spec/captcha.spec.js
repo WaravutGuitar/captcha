@@ -81,11 +81,11 @@ describe('Captcha' , function() {
 	 expect(test.generate()).toEqual('5 * ONE');
  	});
   it('should echo "3 * FIVE" when input (1,3,3,5)',function(){
-		let test = new Captcha(2,4,2,5);
+		let test = new Captcha(1,3,3,5);
 	 expect(test.generate()).toEqual('3 * FIVE');
  	});
   it('should echo "1 + NINE" when input (1,1,1,9)',function(){
-		let test = new Captcha(2,4,2,5);
+		let test = new Captcha(1,1,1,9);
 	 expect(test.generate()).toEqual('1 + NINE');
  	});
 });
