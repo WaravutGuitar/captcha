@@ -16,10 +16,10 @@ function Operator(Op){
       return '/';}
 	}
 }
-function OperandL(pa,left){
+function OperandL(pa,Left){
 	this.toString = function(){
 		    if(pa === 1) {
-          return left;}
+          return Left;}
         else if(pa ===2){
           if(Left === 1){
           return 'ONE';}
@@ -70,7 +70,7 @@ function OperandR(pa,right){
 		}
 	}
 }
-
+//jojo
 describe('Captcha' , function() {
 	it('should echo "7 + FIVE" when input (1,1,7,5)',function(){
 		let test = new Captcha(1,1,7,5);
@@ -97,7 +97,19 @@ describe('Captcha' , function() {
 	 expect(test.generate()).toEqual('TWO + 2');
  	});
   it('should echo "SIX / 7" when input (2,4,6,7)',function(){
-		let test = new Captcha(2,1,2,2);
-	 expect(test.generate()).toEqual('SIX + 7');
+		let test = new Captcha(2,4,6,7);
+	 expect(test.generate()).toEqual('SIX / 7');
+ 	});
+  it('should echo "TWO - 5" when input (2,2,2,5)',function(){
+		let test = new Captcha(2,2,2,5);
+	 expect(test.generate()).toEqual('TWO - 5');
+ 	});
+  it('should echo "ONE + 9" when input (2,1,1,9)',function(){
+		let test = new Captcha(2,1,1,9);
+	 expect(test.generate()).toEqual('ONE + 9');
+ 	});
+  it('should echo "8 / TWO" when input (1,4,8,2)',function(){
+		let test = new Captcha(1,4,8,2);
+	 expect(test.generate()).toEqual('8 / TWO');
  	});
 });
