@@ -70,7 +70,7 @@ function OperandR(pa,right){
 		}
 	}
 }
-//ฟหดวงฟหวดสวฟหดสวงฟหวด
+
 
 describe('Captcha' , function() {
 	it('should echo "7 + FIVE" when input (1,1,7,5)',function(){
@@ -112,5 +112,9 @@ describe('Captcha' , function() {
   it('should echo "8 / TWO" when input (1,4,8,2)',function(){
 		let test = new Captcha(1,4,8,2);
 	 expect(test.generate()).toEqual('8 / TWO');
+ 	});
+  it('should echo "4 - ONE" when input (1,2,1,1)',function(){
+		let test = new Captcha(1,2,1,1);
+	 expect(test.generate()).toEqual('4 - ONE');
  	});
 });
