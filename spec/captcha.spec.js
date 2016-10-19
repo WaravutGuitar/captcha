@@ -47,26 +47,27 @@ function OperandR(pa,right){
 		if(pa === 2) {
       return right;}
 		else if(pa === 1){
-			if(right === 0){
-        return 'ZERO';}
-			else if(right === 1){
-        return 'ONE';}
-			else if(right === 2){
-        return 'TWO';}
-			else if(right === 3){
-        return 'THREE';}
-			else if(right === 4){
-        return 'FOUR';}
-			else if(right === 5){
-        return 'FIVE';}
-			else if(right === 6){
-        return 'SIX';}
-			else if(right === 7){
-        return 'SEVEN';}
-			else if(right === 8){
-        return 'EIGHT';}
-			else if(right === 9){
-        return 'NINE';}
+
+			     if(right === 0){
+              return 'ZERO';}
+			      else if(right === 1){
+              return 'ONE';}
+			      else if(right === 2){
+              return 'TWO';}
+			      else if(right === 3){
+              return 'THREE';}
+			      else if(right === 4){
+              return 'FOUR';}
+			      else if(right === 5){
+              return 'FIVE';}
+			      else if(right === 6){
+              return 'SIX';}
+			      else if(right === 7){
+              return 'SEVEN';}
+			      else if(right === 8){
+              return 'EIGHT';}
+			      else if(right === 9){
+              return 'NINE';}
 		}
 	}
 }
@@ -85,9 +86,9 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,3,3,5);
 	 expect(test.generate()).toEqual('3 * FIVE');
  	});
-  it('should echo "1 + NINE" when input (1,1,1,9)',function(){
-		let test = new Captcha(1,1,1,9);
-	 expect(test.generate()).toEqual('1 + NINE');
+  it('should echo "1 / NINE" when input (1,4,1,9)',function(){
+		let test = new Captcha(1,4,1,9);
+	 expect(test.generate()).toEqual('1 / NINE');
  	});
   it('should echo "THREE * 4" when input (2,3,3,4)',function(){
 		let test = new Captcha(2,3,3,4);
@@ -113,8 +114,12 @@ describe('Captcha' , function() {
 		let test = new Captcha(1,4,8,2);
 	 expect(test.generate()).toEqual('8 / TWO');
  	});
-  it('should echo "4 - ONE" when input (1,2,1,1)',function(){
-		let test = new Captcha(1,2,1,1);
+  it('should echo "4 - ONE" when input (1,2,4,1)',function(){
+		let test = new Captcha(1,2,4,1);
 	 expect(test.generate()).toEqual('4 - ONE');
+ 	});
+  it('should echo "9 - FIVE" when input (1,2,9,5)',function(){
+		let test = new Captcha(1,2,9,5);
+	 expect(test.generate()).toEqual('9 - FIVE');
  	});
 });
