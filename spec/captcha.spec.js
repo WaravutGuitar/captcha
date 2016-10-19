@@ -18,7 +18,7 @@ function Operator(Op){
 }
 function OperandL(pa,Left){
 	this.toString = function(){
-		    if(pa === 1) {
+		if(pa === 1) {
           return Left;}
         else if(pa ===2){
           if(Left === 1){
@@ -44,9 +44,8 @@ function OperandL(pa,Left){
 }
 function OperandR(pa,right){
 	this.toString = function(){
-		if(pa === 2) {
-      return right;}
-		else if(pa === 1){
+
+		if(pa === 1){
 
 			     if(right === 0){
               return 'ZERO';}
@@ -69,6 +68,8 @@ function OperandR(pa,right){
 			      else if(right === 9){
               return 'NINE';}
 		}
+    else if(pa === 2) {
+      return right;}
 	}
 }
 
