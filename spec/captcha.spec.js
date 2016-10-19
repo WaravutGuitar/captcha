@@ -70,7 +70,8 @@ function OperandR(pa,right){
 		}
 	}
 }
-//jojo
+//ฟหดวงฟหวดสวฟหดสวงฟหวด
+
 describe('Captcha' , function() {
 	it('should echo "7 + FIVE" when input (1,1,7,5)',function(){
 		let test = new Captcha(1,1,7,5);
