@@ -20,25 +20,27 @@ function OperandL(pa,Left){
 	this.toString = function(){
 		if(pa === 1) {
           return Left;}
-        else if(pa ===2){
-          if(Left === 1){
-          return 'ONE';}
-  			else if(Left === 2){
-          return 'TWO';}
-  			else if(Left === 3){
-          return 'THREE';}
+    else if(pa ===2){
+
+        if(Left === 1){
+            return 'ONE';}
+  		  else if(Left === 2){
+            return 'TWO';}
+  		  else if(Left === 3){
+            return 'THREE';}
   			else if(Left === 4){
-          return 'FOUR';}
+            return 'FOUR';}
   			else if(Left === 5){
-          return 'FIVE';}
+            return 'FIVE';}
   			else if(Left === 6){
-          return 'SIX';}
+            return 'SIX';}
   			else if(Left === 7){
-          return 'SEVEN';}
+            return 'SEVEN';}
   			else if(Left === 8){
-          return 'EIGHT';}
+            return 'EIGHT';}
   			else if(Left === 9){
-          return 'NINE';}
+            return 'NINE';}
+
         }
 	}
 }
@@ -122,5 +124,9 @@ describe('Captcha' , function() {
   it('should echo "9 - FIVE" when input (1,2,9,5)',function(){
 		let test = new Captcha(1,2,9,5);
 	 expect(test.generate()).toEqual('9 - FIVE');
+ 	});
+  it('should echo "FOUR / 3" when input (2,4,4,3)',function(){
+		let test = new Captcha(2,4,4,3);
+	 expect(test.generate()).toEqual('FOUR / 3');
  	});
 });
